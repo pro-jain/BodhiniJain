@@ -2,6 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
+
+dotenv.config();
+
 const authRoutes = require("./routes/auth");
 const projectRoutes = require("./routes/projects");
 const experienceRoutes = require("./routes/experiences");
@@ -13,24 +16,23 @@ const allowedOrigins = [
   process.env.CORS_ORIGIN,
   process.env.CORS_ORIGIN_2,
   process.env.CORS_ORIGIN_3,
-  "https://airy-spirit.railway.app",
-  "https://your-vercel-app.vercel.app",
+  process.env.FRONTEND_URL,
 ].filter(Boolean);
-
-dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://your-vercel-app.vercel.app",
-      "https://airy-spirit.railway.app",
-    ],
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) return callback(null, true);
+      return callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
+    optionsSuccessStatus: 200,
   })
 );
+app.options("*", cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
