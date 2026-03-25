@@ -6,11 +6,16 @@ const authRoutes = require("./routes/auth");
 const projectRoutes = require("./routes/projects");
 const experienceRoutes = require("./routes/experiences");
 const achievementRoutes = require("./routes/achievements");
-const skillsRoutes = require("./routes/skills");
+const interestRoutes = require("./routes/interests");
+
 const allowedOrigins = [
   "http://localhost:5173",
+  process.env.CORS_ORIGIN,
+  process.env.CORS_ORIGIN_2,
+  process.env.CORS_ORIGIN_3,
+  "https://airy-spirit.railway.app",
   "https://your-vercel-app.vercel.app",
-];
+].filter(Boolean);
 
 dotenv.config();
 
@@ -37,7 +42,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/experiences", experienceRoutes);
 app.use("/api/achievements", achievementRoutes);
-app.use("/api/skills", skillsRoutes);
+app.use("/api/interests", interestRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
