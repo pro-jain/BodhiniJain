@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Briefcase } from "lucide-react";
 import type { achievements } from "../../backend.d";
 
-const API_BASE = import.meta.env.VITE_BACKEND_API || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_BACKEND_API || "https://airy-spirit.railway.app/";
 
 interface AchievementsProps {
   data?: achievements[];
