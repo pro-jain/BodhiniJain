@@ -22,7 +22,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: process.env.VITE_BACKEND_API || "http://127.0.0.1:5000",
+        target: process.env.VITE_BACKEND_API || "https://airy-spirit.railway.app/",
         changeOrigin: true,
       },
     },
