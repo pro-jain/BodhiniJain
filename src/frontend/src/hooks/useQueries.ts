@@ -14,10 +14,10 @@ export function usePortfolio() {
     queryFn: async () => {
       try {
         const [projects, experiences, interests, achievements] = await Promise.all([
-          fetch(`${API_BASE}/api/projects`).then((r) => (r.ok ? r.json() : Promise.reject())),
-          fetch(`${API_BASE}/api/experiences`).then((r) => (r.ok ? r.json() : Promise.reject())),
-          fetch(`${API_BASE}/api/interests`).then((r) => (r.ok ? r.json() : Promise.reject())),
-          fetch(`${API_BASE}/api/achievements`).then((r) => (r.ok ? r.json() : Promise.reject())),
+          fetch(`${API_BASE}api/projects`).then((r) => (r.ok ? r.json() : Promise.reject())),
+          fetch(`${API_BASE}api/experiences`).then((r) => (r.ok ? r.json() : Promise.reject())),
+          fetch(`${API_BASE}api/interests`).then((r) => (r.ok ? r.json() : Promise.reject())),
+          fetch(`${API_BASE}api/achievements`).then((r) => (r.ok ? r.json() : Promise.reject())),
         ]);
 
         return {
@@ -43,14 +43,14 @@ export function useAboutMe() {
   });
 }
 
-const API_BASE = import.meta.env.VITE_BACKEND_API || "https://airy-spirit.railway.app/";
+const API_BASE = import.meta.env.VITE_BACKEND_API || "https://airy-spirit.railway.app";
 
 export function useProjects() {
   return useQuery<Project[]>({
     queryKey: ["projects"],
     queryFn: async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/projects`);
+        const res = await fetch(`${API_BASE}api/projects`);
         if (!res.ok) throw new Error("Failed to load projects");
         return (await res.json()) as Project[];
       } catch {
@@ -65,7 +65,7 @@ export function useExperiences() {
     queryKey: ["experiences"],
     queryFn: async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/experiences`);
+        const res = await fetch(`${API_BASE}api/experiences`);
         if (!res.ok) throw new Error("Failed to load experiences");
         return (await res.json()) as Experience[];
       } catch {
@@ -80,7 +80,7 @@ export function useInterests() {
     queryKey: ["interests"],
     queryFn: async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/interests`);
+        const res = await fetch(`${API_BASE}api/interests`);
         if (!res.ok) throw new Error("Failed to load skills");
         return (await res.json()) as Interest[];
       } catch {
@@ -95,7 +95,7 @@ export function useAchievements() {
     queryKey: ["achievements"],
     queryFn: async () => {
       try {
-        const res = await fetch(`${API_BASE}/api/achievements`);
+        const res = await fetch(`${API_BASE}api/achievements`);
         if (!res.ok) throw new Error("Failed to load achievements");
         return (await res.json()) as achievements[];
       } catch {
