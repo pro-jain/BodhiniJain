@@ -14,10 +14,10 @@ export function usePortfolio() {
     queryFn: async () => {
       try {
         const [projects, experiences, interests, achievements] = await Promise.all([
-          fetch(`${API_BASE}api/projects`).then((r) => (r.ok ? r.json() : Promise.reject())),
-          fetch(`${API_BASE}api/experiences`).then((r) => (r.ok ? r.json() : Promise.reject())),
-          fetch(`${API_BASE}api/interests`).then((r) => (r.ok ? r.json() : Promise.reject())),
-          fetch(`${API_BASE}api/achievements`).then((r) => (r.ok ? r.json() : Promise.reject())),
+          fetch(`${API_BASE}/api/projects`).then((r) => (r.ok ? r.json() : Promise.reject())),
+          fetch(`${API_BASE}/api/experiences`).then((r) => (r.ok ? r.json() : Promise.reject())),
+          fetch(`${API_BASE}/api/interests`).then((r) => (r.ok ? r.json() : Promise.reject())),
+          fetch(`${API_BASE}/api/achievements`).then((r) => (r.ok ? r.json() : Promise.reject())),
         ]);
 
         return {
