@@ -35,11 +35,11 @@ app.use(
 app.options("/{*path}", cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());
 
-app.use("api/auth", authRoutes);
-app.use("api/projects", projectRoutes);
-app.use("api/experiences", experienceRoutes);
-app.use("api/achievements", achievementRoutes);
-app.use("api/interests", interestRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/projects", projectRoutes);
+app.use("/api/experiences", experienceRoutes);
+app.use("/api/achievements", achievementRoutes);
+app.use("/api/interests", interestRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
