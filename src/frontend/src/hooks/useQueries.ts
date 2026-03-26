@@ -44,7 +44,6 @@ export function useAboutMe() {
   });
 }
 
-const API_BASE = `${import.meta.env.VITE_BACKEND_API || "https://airy-spirit.railway.app"}/`;
 
 export function useProjects() {
   return useQuery<Project[]>({
