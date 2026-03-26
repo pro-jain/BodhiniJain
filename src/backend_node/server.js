@@ -32,7 +32,7 @@ app.use(
     optionsSuccessStatus: 200,
   })
 );
-app.options("*", cors({ origin: allowedOrigins, credentials: true }));
+app.options("/{*path}", cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
