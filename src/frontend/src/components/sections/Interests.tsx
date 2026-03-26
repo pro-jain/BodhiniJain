@@ -117,6 +117,8 @@ export default function InterestsSection({ data, isLoading }: InterestsProps) {
         modalMode === "edit" && editingId
           ? `${API_BASE}/api/interests/${editingId}`
           : `${API_BASE}/api/interests`;
+          ? `${API_BASE}/api/skills/${editingId}`
+          : `${API_BASE}/api/skills`;
       const res = await fetch(url, {
         method,
         headers: {
