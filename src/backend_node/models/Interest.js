@@ -5,4 +5,4 @@ const interestSchema = new mongoose.Schema({
   description: { type: String, required: true },
 });
 
-module.exports = mongoose.model("Skill", interestSchema);
+module.exports = mongoose.model("Skill", interestSchema,"skills");
