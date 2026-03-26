@@ -3,12 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "pnpm@10.32.1",
   "engines": {
     "node": "20.x"
   },
   "scripts": {
     "dev": "vite dev --host --port 5173",
-    "build": "vite build && pnpm copy:env",
+    "build": "vite build",
+    "postbuild": "cp env.json dist/",
     "copy:env": "cp env.json dist/",
     "typecheck": "tsc --noEmit --incremental --tsBuildInfoFile node_modules/.cache/tsconfig.tsbuildinfo --pretty",
     "check": "biome check src",
