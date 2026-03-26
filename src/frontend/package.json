@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+   "type": "module",
+  "engines": {
+    "node": "20.x"
+  }
   "scripts": {
     "dev": "vite dev --host --port 5173",
     "build": "vite build && pnpm copy:env",
