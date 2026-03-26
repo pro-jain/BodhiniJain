@@ -7,6 +7,7 @@ import type {
   Portfolio,
   Project,
 } from "../backend.d";
+const API_BASE = `${import.meta.env.VITE_BACKEND_API || "https://airy-spirit.railway.app"}/`;
 
 export function usePortfolio() {
   return useQuery<Portfolio>({
