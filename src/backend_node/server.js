@@ -52,6 +52,9 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/experiences", experienceRoutes);
 app.use("/api/achievements", achievementRoutes);
 app.use("/api/interests", interestRoutes);
+app.use("/api/skills", skillsRoutes);
+
+
 
 mongoose
   .connect(process.env.MONGO_URI)
