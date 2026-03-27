@@ -15,6 +15,8 @@ interface FileManagerWindowProps {
   onNavigate?: (label: string) => void;
 }
 
+const playfulLabels = ["Starred", "Recent", "Trash"];
+
 const sidebarItems = [
   { icon: <Home size={14} />, label: "Home" },
   { icon: <Folder size={14} />, label: "Projects" },
@@ -67,7 +69,13 @@ export default function FileManagerWindow({
                 color: isActive ? "white" : "oklch(0.62 0.03 260)",
                 fontSize: "12px",
               }}
-              onClick={() => onNavigate?.(item.label)}
+              onClick={() => {
+                if (playfulLabels.includes(item.label)) {
+                  window.alert("This button is just for fun ✨");
+                  return;
+                }
+                onNavigate?.(item.label);
+              }}
             >
               <span
                 style={{
