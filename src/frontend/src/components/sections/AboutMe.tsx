@@ -10,7 +10,7 @@ interface AboutMeProps {
 }
 
 export default function AboutMeSection({ data, isLoading }: AboutMeProps) {
-  const API_BASE = import.meta.env.VITE_BACKEND_API || "https://airy-spirit.railway.app/";
+  const API_BASE = import.meta.env.VITE_BACKEND_API || "https://bodhini-jain.vercel.app/";
   const [token, setToken] = useState<string | null>(null);
   const [adminUser, setAdminUser] = useState<string | null>(null);
   const [usernameInput, setUsernameInput] = useState("");
