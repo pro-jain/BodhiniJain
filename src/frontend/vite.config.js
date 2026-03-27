@@ -22,7 +22,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: process.env.VITE_BACKEND_API || "https://airy-spirit.railway.app/",
+        target: process.env.VITE_BACKEND_API || "bodhini-jain.vercel.app/",
         changeOrigin: true,
       },
     },
