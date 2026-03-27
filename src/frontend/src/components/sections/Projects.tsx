@@ -13,26 +13,38 @@ const API_BASE = import.meta.env.VITE_BACKEND_API || "https://bodhini-jain.verce
 
 const techColors: Record<string, string> = {
   TypeScript: "#3178c6",
-  React: "#61dafb",
+"Image Stitching": "#31c688",
+  ReactJS: "#61dafb",
   Python: "#ffd343",
   WebODM: "#ce4a00",
-  "Node.JS": "#3c873a",
-  "Next.js": "#aaa",
+  "NodeJS": "#3c873a",
+  "NextJS": "#3a4387",
+  ReLU: "#97417c",
   Arduino: "#2496ed",
   ROS: "#e10098",
   ROS2: "#8b226a",
   Gazebo: "#fc7c00",
   Figma: "#dc382c",
   "Lora Module": "#059669",
-  PyTorch: "#ee4c2c",
+  Tailwind: "#ee4c2c",
   Mediapipe: "#7c3aed",
-  WebSockets: "#f59e0b",
-  ONNX: "#005a9e",
-  Sensors: "#e10000",
-  "Raspberry pi": "#4285f4",
-  Pixhawk: "#adc003",
+  "Python (NumPy OpenCV Dronekit)": "#a2902c",
+  "Web Sockets": "#f59e0b",
+  Threading: "#6c31c6",
+  "Arduino programming": "#005a9e",
+  Jetson: "#e10000",
+  "Raspberry pi": "#4285f4",  
+  Ardupilot: "#adc003",
   Rqt: "#0022e1",
+  "MongoDB" : "#a94b5f",
+  "Ubuntu": "#5c8f6f",
+  "ROSNavStack": "#470375",
+  "Mission Planner": "#0d9488",
+  Tensorflow: "#99ff00",
+  "OpenCV": "#5c848f"
+  ExpressJS: "#000000",
 };
+
 
 export default function ProjectsSection({ data, isLoading }: ProjectsProps) {
   const queryClient = useQueryClient();
