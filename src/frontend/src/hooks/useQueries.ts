@@ -80,7 +80,6 @@ export function useInterests() {
     queryKey: ["interests"],
     queryFn: async () => {
       try {
-        const res = await fetch(`${API_BASE}api/interests`);
         const res = await fetch(`${API_BASE}api/skills`);
         if (!res.ok) throw new Error("Failed to load skills");
         return (await res.json()) as Interest[];
