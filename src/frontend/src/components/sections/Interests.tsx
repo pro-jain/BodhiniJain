@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import type { Interest } from "../../backend.d";
 
-const API_BASE = import.meta.env.VITE_BACKEND_API || "https://airy-spirit.railway.app/";
+const API_BASE = import.meta.env.VITE_BACKEND_API || "https://bodhini-jain.vercel.app/";
 
 interface InterestsProps {
   data?: Interest[];
