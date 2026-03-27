@@ -41,7 +41,7 @@ const techColors: Record<string, string> = {
   "ROSNavStack": "#470375",
   "Mission Planner": "#0d9488",
   Tensorflow: "#99ff00",
-  "OpenCV": "#5c848f"
+  "OpenCV": "#5c848f",
   ExpressJS: "#000000",
 };
 
