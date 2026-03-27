@@ -9,7 +9,7 @@ interface ProjectsProps {
   isLoading?: boolean;
 }
 
-const API_BASE = import.meta.env.VITE_BACKEND_API || "https://airy-spirit.railway.app/";
+const API_BASE = import.meta.env.VITE_BACKEND_API || "https://bodhini-jain.vercel.app/";
 
 const techColors: Record<string, string> = {
   TypeScript: "#3178c6",
