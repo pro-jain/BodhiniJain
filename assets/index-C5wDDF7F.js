@@ -23186,17 +23186,17 @@ const featureBundle = {
   ...layout
 };
 const motion = /* @__PURE__ */ createMotionProxy(featureBundle, createDomVisualElement);
-const API_BASE$4 = `${"https://bodhini-jain.vercel.app"}/`;
+const API_BASE$4 = "https://bodhini-jain.vercel.app".replace(/\/+$/, "");
 function usePortfolio() {
   return useQuery({
     queryKey: ["portfolio"],
     queryFn: async () => {
       try {
         const [projects, experiences, interests, achievements] = await Promise.all([
-          fetch(`${API_BASE$4}api/projects`).then((r2) => r2.ok ? r2.json() : Promise.reject()),
-          fetch(`${API_BASE$4}api/experiences`).then((r2) => r2.ok ? r2.json() : Promise.reject()),
-          fetch(`${API_BASE$4}api/interests`).then((r2) => r2.ok ? r2.json() : Promise.reject()),
-          fetch(`${API_BASE$4}api/achievements`).then((r2) => r2.ok ? r2.json() : Promise.reject())
+          fetch(`${API_BASE$4}/api/projects`).then((r2) => r2.ok ? r2.json() : Promise.reject()),
+          fetch(`${API_BASE$4}/api/experiences`).then((r2) => r2.ok ? r2.json() : Promise.reject()),
+          fetch(`${API_BASE$4}/api/interests`).then((r2) => r2.ok ? r2.json() : Promise.reject()),
+          fetch(`${API_BASE$4}/api/achievements`).then((r2) => r2.ok ? r2.json() : Promise.reject())
         ]);
         return {
           ...Portfolio(),
@@ -23216,7 +23216,7 @@ function useProjects() {
     queryKey: ["projects"],
     queryFn: async () => {
       try {
-        const res = await fetch(`${API_BASE$4}api/projects`);
+        const res = await fetch(`${API_BASE$4}/api/projects`);
         if (!res.ok) throw new Error("Failed to load projects");
         return await res.json();
       } catch {
@@ -23230,7 +23230,7 @@ function useExperiences() {
     queryKey: ["experiences"],
     queryFn: async () => {
       try {
-        const res = await fetch(`${API_BASE$4}api/experiences`);
+        const res = await fetch(`${API_BASE$4}/api/experiences`);
         if (!res.ok) throw new Error("Failed to load experiences");
         return await res.json();
       } catch {
@@ -23244,7 +23244,7 @@ function useInterests() {
     queryKey: ["interests"],
     queryFn: async () => {
       try {
-        const res = await fetch(`${API_BASE$4}api/skills`);
+        const res = await fetch(`${API_BASE$4}/api/skills`);
         if (!res.ok) throw new Error("Failed to load skills");
         return await res.json();
       } catch {
@@ -23258,7 +23258,7 @@ function useAchievements() {
     queryKey: ["achievements"],
     queryFn: async () => {
       try {
-        const res = await fetch(`${API_BASE$4}api/achievements`);
+        const res = await fetch(`${API_BASE$4}/api/achievements`);
         if (!res.ok) throw new Error("Failed to load achievements");
         return await res.json();
       } catch {
@@ -32723,6 +32723,7 @@ function Switch({
     }
   );
 }
+const ASSET_BASE$1 = "/BodhiniJain/";
 function TopBar({
   onActivitiesClick,
   onPowerClick,
@@ -32782,7 +32783,7 @@ function TopBar({
             className: "flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-medium transition-ubuntu hover:bg-white/10 text-white/90",
             style: { fontSize: "13px" },
             children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/app-icon.svg", alt: "Activities", width: 16, height: 16 }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: `${ASSET_BASE$1}app-icon.svg`, alt: "Activities", width: 16, height: 16 }),
               "Activities"
             ]
           }
@@ -33437,7 +33438,7 @@ function Skeleton({ className, ...props }) {
   );
 }
 function AboutMeSection({ data, isLoading }) {
-  const API_BASE2 = "https://bodhini-jain.vercel.app/";
+  const API_BASE2 = "https://bodhini-jain.vercel.app".replace(/\/+$/, "");
   const [token, setToken] = reactExports.useState(null);
   const [adminUser, setAdminUser] = reactExports.useState(null);
   const [usernameInput, setUsernameInput] = reactExports.useState("");
@@ -33519,7 +33520,7 @@ function AboutMeSection({ data, isLoading }) {
     setShowLogin(false);
   };
   const displayName = "Bodhini Jain";
-  const profileImage = "/profile.png";
+  const profileImage = `${"/BodhiniJain/"}profile.png`;
   if (isLoading) {
     return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-6 space-y-4", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "h-20 w-20 rounded-full" }),
@@ -33761,7 +33762,7 @@ function AboutMeSection({ data, isLoading }) {
     }
   );
 }
-const API_BASE$3 = "https://bodhini-jain.vercel.app/";
+const API_BASE$3 = "https://bodhini-jain.vercel.app".replace(/\/+$/, "");
 function AchievementsSection({
   data,
   isLoading
@@ -34065,7 +34066,7 @@ function AchievementsSection({
     }
   );
 }
-const API_BASE$2 = "https://bodhini-jain.vercel.app/";
+const API_BASE$2 = "https://bodhini-jain.vercel.app".replace(/\/+$/, "");
 function ExperiencesSection({
   data,
   isLoading
@@ -34441,9 +34442,9 @@ function ExperiencesSection({
     }
   );
 }
-const API_BASE$1 = "https://bodhini-jain.vercel.app/";
+const API_BASE$1 = "https://bodhini-jain.vercel.app".replace(/\/+$/, "");
 const interestImages = {
-  "Core Areas": "/Core_area.png",
+  "Core Areas": "Core_area.png",
   "Programming Languages": "programmin_languages.png",
   "Robotics & UAV Stack": "Robotics.png",
   "Computer Vision & AI": "Computer_vision.png",
@@ -34729,7 +34730,7 @@ function InterestsSection({ data, isLoading }) {
     }
   );
 }
-const API_BASE = "https://bodhini-jain.vercel.app/";
+const API_BASE = "https://bodhini-jain.vercel.app".replace(/\/+$/, "");
 const techColors = {
   TypeScript: "#3178c6",
   "Image Stitching": "#31c688",
@@ -35248,11 +35249,12 @@ function helloWorld() {
   ] });
 }
 let zCounter = 100;
+const ASSET_BASE = "/BodhiniJain/";
 const wallpapers = [
   {
     name: "Ubuntu 22.04",
     base: "#0f0a1c",
-    asset: "/wallpapers/ubuntu-22-04-5.png",
+    asset: `${ASSET_BASE}wallpapers/ubuntu-22-04-5.png`,
     overlay: "linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(18,8,24,0.65) 80%)"
   }
 ];
