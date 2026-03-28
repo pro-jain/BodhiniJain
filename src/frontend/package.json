@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "homepage" : "https://pro-jain.github.io/BodhiniJain/",
+  "homepage": "https://pro-jain.github.io/BodhiniJain/",
   "version": "0.0.0",
   "type": "module",
   "packageManager": "pnpm@10.32.1",
@@ -10,8 +10,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "cp env.json dist/",
-    "copy:env": "cp env.json dist/",
+    "postbuild": "copy env.json dist\\env.json",
+    "copy:env": "copy env.json dist\\env.json",
     "typecheck": "tsc --noEmit --incremental --tsBuildInfoFile node_modules/.cache/tsconfig.tsbuildinfo --pretty",
     "check": "biome check src",
     "fix": "biome check --write src",
@@ -36,7 +36,7 @@
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.8.3",
-    "vite": "^5.4.1",
+    "vite": "^5.4.21",
     "vite-plugin-environment": "^1.1.3"
   },
   "dependencies": {
