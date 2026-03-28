@@ -77,12 +77,14 @@ type Wallpaper = {
   overlay?: string;
 };
 
+const ASSET_BASE = import.meta.env.BASE_URL || "/";
+
 const wallpapers: Wallpaper[] = [
    
   {
     name: "Ubuntu 22.04",
     base: "#0f0a1c",
-    asset: "/wallpapers/ubuntu-22-04-5.png",
+    asset: `${ASSET_BASE}wallpapers/ubuntu-22-04-5.png`,
     overlay: "linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(18,8,24,0.65) 80%)",
   },
 ];

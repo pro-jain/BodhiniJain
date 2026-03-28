@@ -15,6 +15,8 @@ import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Slider } from "./ui/slider";
 import { Switch } from "./ui/switch";
 
+const ASSET_BASE = import.meta.env.BASE_URL || "/";
+
 interface TopBarProps {
   onActivitiesClick: () => void;
   onPowerClick?: () => void;
@@ -84,7 +86,7 @@ export default function TopBar({
         className="flex items-center gap-1.5 px-2 py-0.5 rounded text-sm font-medium transition-ubuntu hover:bg-white/10 text-white/90"
         style={{ fontSize: "13px" }}
       >
-        <img src="/app-icon.svg" alt="Activities" width={16} height={16} />
+        <img src={`${ASSET_BASE}app-icon.svg`} alt="Activities" width={16} height={16} />
         Activities
       </button>
 
