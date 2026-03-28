@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "private": true,
+  "homepage" : "https://pro-jain.github.io/BodhiniJain/",
   "version": "0.0.0",
   "type": "module",
   "packageManager": "pnpm@10.32.1",
@@ -8,13 +8,16 @@
     "node": "22.x"
   },
   "scripts": {
-    "dev": "vite dev --host --port 5173",
+    "dev": "vite",
     "build": "vite build",
     "postbuild": "cp env.json dist/",
     "copy:env": "cp env.json dist/",
     "typecheck": "tsc --noEmit --incremental --tsBuildInfoFile node_modules/.cache/tsconfig.tsbuildinfo --pretty",
     "check": "biome check src",
-    "fix": "biome check --write src"
+    "fix": "biome check --write src",
+    "preview": "vite preview",
+    "predeploy": "pnpm run build",
+  "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.0",
