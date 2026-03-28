@@ -30,7 +30,7 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-  base: "/BodhiniJain",
+  base: "/BodhiniJain/",
   resolve: {
     alias: [
       {
