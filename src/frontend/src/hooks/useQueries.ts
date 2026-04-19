@@ -123,7 +123,7 @@ Project Manager — SAE Phoenix Aero.`,
         email: "jainbodhini05@gmail.com",
         github: "https://github.com/pro-jain",
         linkedin: "https://www.linkedin.com/in/bodhini-jain-6959322a6/",
-        website: "https://alexrivera.dev",
+        website: "https://pro-jain.github.io/BodhiniJain/",
       },
     },
     projects: [
@@ -132,7 +132,7 @@ Project Manager — SAE Phoenix Aero.`,
         description:
           "• Operated and optimized an agricultural irrigation drone system for precision spraying. • Integrated flight controller telemetry with ground station(Node express) using LoRa module communication. • Processed onboard camera feed using OpenCV for visual monitoring and system validation  ",
         techStack: ["", "React", "TypeScript", "ICP"],
-        link: "https://github.com/alexrivera/decentchat",
+        link: "https://github.com/pro-jain/NIDAR",
       },
       {
         name: "Rock paper Scissors game on robotic arm",
