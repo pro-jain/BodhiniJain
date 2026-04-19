@@ -541,7 +541,7 @@ export default function Terminal({
             ),
             mkLine(
               "output",
-              `     /|   |\\       ${C}[1;32mHost:${C}[0m   alexrivera.dev`,
+              `     /|   |\\       ${C}[1;32mHost:${C}[0m   https://pro-jain.github.io/BodhiniJain/`,
             ),
             mkLine(
               "output",
