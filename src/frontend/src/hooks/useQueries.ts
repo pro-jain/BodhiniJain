@@ -146,14 +146,14 @@ Project Manager — SAE Phoenix Aero.`,
         description:
           "Assembled and performed SLAM (Simultaneous Localization and Mapping) using 2-D LIDAR and obstacle avoidance.",
         techStack: ["ROS2", "RQT", "ROSNavStack", "Redis"],
-        link: "https://github.com/alexrivera/cryptovault",
+        link: "https://drive.google.com/drive/folders/1x6_30RdD_x5pl_o7iv2HNEQCwtW4Xlxn",
       },
       {
         name: "Payload dropping Drone ",
         description:
           "Real-time navigation and obstacle avoidance.Flight control algorithms, sensor integration, circuit understanding, calibration and testing. We got AIR 2(2025) , AIR 3 (2026) in national level ADDC competition conducted by SAE-ISS ",
         techStack: ["OpenCV", "ROS", "Gazebo", "Mission Planner", "Python (NumPy, OpenCV, Dronekit)","Pixhawk","Raspberry pi"],
-        link: "https://github.com/alexrivera/codecollab",
+        link: "https://www.linkedin.com/posts/bodhini-jain-6959322a6_addc2025-dronechampions-phoenixaero-activity-7315007447725658113-sOY-/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEnSEFEBMdNEtXIbFTE-9C03Tum9xodTpRU",
       },
       {
         name: "Fullstack Website (Google Winter Of Code)  ",
